@@ -16,8 +16,12 @@ export const productSlice = createSlice({
   reducers: {
     getProducts: (state) => {
       state.loading = true;
-      const localItems = localStorage.getItem("products") || "";
-      const products = JSON.parse(localItems);
+      const localItems: any = localStorage.getItem("products")
+        ? localStorage.getItem("products")
+        : [];
+      console.log(localItems);
+      const products = localItems.length ? JSON.parse(localItems) : [];
+      console.log(products);
       state.products = products;
       state.loading = false;
     },
