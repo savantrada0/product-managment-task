@@ -172,7 +172,7 @@ const ProductList = () => {
         errors={errors}
         setErrors={setErrors}
       />
-      <div style={{ margin: "opx 260px" }}>
+      <div style={{ margin: "0px 260px" }}>
         <Box sx={{ height: 631, width: "100%" }}>
           <DataGrid
             rows={rows}
